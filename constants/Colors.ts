@@ -8,5 +8,6 @@ export default {
   grey1: '#A7A7A7',
   grey2: '#A7A7A7',
   grey3: '#DCDFE3',
-  yellow: '#FFE55A'
+  yellow: '#FFE55A',
+  trasparent: 'rgba(0,0,0,0)'
 }

@@ -43,7 +43,7 @@ const OnboardingScreen: React.FC = () => {
           accessible
           onPress={() => { router.push('/home/') }}
             style={[
-              Shadows.button,
+              Shadows.button.primary,
               {
                 backgroundColor: Colors.primary,
                 justifyContent: 'center',
