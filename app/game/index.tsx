@@ -20,6 +20,7 @@ import Animated, {
   withTiming
 } from 'react-native-reanimated'
 import { router } from 'expo-router'
+import useScoreStore from '../../store/useScoreStore'
 
 export const Button: React.FC<{
   tx: string
@@ -112,11 +113,16 @@ const GuessClubWithImage: React.FC<{
   useEffect(() => {
     setQuestion()
   }, [])
+  const { updateScore } = useScoreStore()
 
   const handleAnswer = (selectedAnswer: Club | null): void => {
-    selectedAnswer?.ID === questionData.correctAnswer.ID
-      ? setWin(true)
-      : setWin(false)
+    if (selectedAnswer?.ID === questionData.correctAnswer.ID) {
+      void updateScore(true)
+      setWin(true)
+    } else {
+      void updateScore(false)
+      setWin(false)
+    }
   }
 
   const progress = useSharedValue(1)
@@ -249,14 +255,10 @@ const GameScreen: React.FC<GameProps> = () => {
   const [win, setWin] = useState<null | boolean>(null)
 
   useEffect(() => {
-    if (win === true) {
-      router.replace('/game/win')
-      return
-    } else if (win === false) {
-      router.replace('/game/lose')
+    if (win === true || win === false) {
+      router.replace({ pathname: '/game/result', params: { win: win.toString() } })
       return
     }
-
     return () => {
       router.replace('/home/')
     }

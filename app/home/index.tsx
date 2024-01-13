@@ -8,8 +8,6 @@ import { Image } from 'expo-image'
 import Fonts from '../../constants/Fonts'
 import Shadows from '../../constants/Shadows'
 import { router } from 'expo-router'
-/* import Book from '../../assets/icons/Icon - Book.svg'
-import Profile from '../../assets/icons/Icon - Profile.svg' */
 import Arrow from '../../assets/icons/Icon - Arrow.svg'
 
 const HomeScreen: React.FC = () => {
@@ -89,55 +87,6 @@ const HomeScreen: React.FC = () => {
             <Arrow width={24} height={24} style={{ transform: [{ rotate: '180deg' }] }} />
           </TouchableOpacity>
         </View>
-        {/* <View style={{ position: 'absolute', width: '100%', flexDirection: 'row', justifyContent: 'center', gap: 16, paddingVertical: 16, bottom: height > 700 ? 64 : 32 }}>
-          <TouchableOpacity
-            activeOpacity={0.95}
-            accessible
-            onPress={() => {
-              router.push('/home/')
-            }}
-            style={[
-              Shadows.button.secondary,
-              {
-                backgroundColor: Colors.secondary,
-                justifyContent: 'center',
-                alignItems: 'center',
-                flexGrow: 0,
-                padding: 20,
-                borderRadius: 28,
-                zIndex: 5,
-                borderWidth: 1,
-                borderColor: Colors.white
-              }
-            ]}
-          >
-            <Book width={32} height={32} />
-          </TouchableOpacity>
-          <TouchableOpacity
-            activeOpacity={0.95}
-            accessible
-            onPress={() => {
-              router.push('/home/')
-            }}
-            style={[
-              Shadows.button.primary,
-              {
-                backgroundColor: Colors.primary,
-                justifyContent: 'center',
-                alignItems: 'center',
-                flexGrow: 0,
-                padding: 20,
-                borderRadius: 28,
-                zIndex: 5,
-                borderWidth: 1,
-                borderColor: Colors.white
-              }
-            ]}
-          >
-            <Profile width={32} height={32} />
-          </TouchableOpacity>
-
-        </View> */}
       </LinearGradient>
     </ScrollView>
   )

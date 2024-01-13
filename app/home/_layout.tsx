@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Stack } from 'expo-router'
 import { Text, View } from 'react-native'
 import Colors from '../../constants/Colors'
 import { gutter, margin, width } from '../../constants/Spacing'
 import Fonts from '../../constants/Fonts'
 import Shadows from '../../constants/Shadows'
+import useScoreStore from '../../store/useScoreStore'
 
 const HomeStack: React.FC = () => {
+  const { init } = useScoreStore()
+
+  useEffect(() => {
+    void init()
+  }, [])
+
   const Header: React.FC = () => {
     return (
     <View style={{ paddingTop: 40, position: 'absolute', alignItems: 'center', maxWidth: 500, maxHeight: 700, width: '100%', justifyContent: 'center', alignSelf: 'center' }}>
