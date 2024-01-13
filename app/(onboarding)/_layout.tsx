@@ -1,14 +1,14 @@
-import { Stack } from "expo-router";
-import React from "react";
+import { Stack } from 'expo-router'
+import React from 'react'
 
-const Layout = () => {
+const Layout: React.FC = () => {
   return (
     <Stack
       screenOptions={{
-        headerShown: false,
+        headerShown: false
       }}
     ></Stack>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

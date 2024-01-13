@@ -8,12 +8,11 @@ import { Image } from 'expo-image'
 import Fonts from '../../constants/Fonts'
 import Shadows from '../../constants/Shadows'
 import { router } from 'expo-router'
-import Book from '../../assets/icons/Icon - Book.svg'
-import Profile from '../../assets/icons/Icon - Profile.svg'
+/* import Book from '../../assets/icons/Icon - Book.svg'
+import Profile from '../../assets/icons/Icon - Profile.svg' */
 import Arrow from '../../assets/icons/Icon - Arrow.svg'
 
 const HomeScreen: React.FC = () => {
-  console.log(height)
   return (
     <ScrollView contentContainerStyle={{ flex: 1 }}>
       <LinearGradient
@@ -33,12 +32,13 @@ const HomeScreen: React.FC = () => {
           style={{ position: 'absolute', maxWidth: 500, maxHeight: 700 }}
         />
         <View style={{ position: 'absolute' }}>
+          <TouchableOpacity onPress={() => { router.push('/game/') }}>
           <Image
             source={require('../../assets/images/Multiplayer.png')}
             style={{
               width,
               maxWidth: 500,
-              maxHeight: height > 700 ? 500 * 0.736 : 500 * 0.3,
+              maxHeight: height / 2,
               height: width * 0.736,
               objectFit: 'contain',
               resizeMode: 'contain'
@@ -47,6 +47,7 @@ const HomeScreen: React.FC = () => {
           <Text style={[Fonts.menu, { textAlign: 'center', marginTop: 16 }]}>
             {'MULTI\nPLAYER'}
           </Text>
+          </TouchableOpacity>
         </View>
         <View style={{ width, justifyContent: 'space-between', flexDirection: 'row', maxWidth: 500 }}>
         <TouchableOpacity
@@ -88,7 +89,7 @@ const HomeScreen: React.FC = () => {
             <Arrow width={24} height={24} style={{ transform: [{ rotate: '180deg' }] }} />
           </TouchableOpacity>
         </View>
-        <View style={{ position: 'absolute', width: '100%', flexDirection: 'row', justifyContent: 'center', gap: 16, paddingVertical: 16, bottom: height > 700 ? 64 : 32 }}>
+        {/* <View style={{ position: 'absolute', width: '100%', flexDirection: 'row', justifyContent: 'center', gap: 16, paddingVertical: 16, bottom: height > 700 ? 64 : 32 }}>
           <TouchableOpacity
             activeOpacity={0.95}
             accessible
@@ -136,7 +137,7 @@ const HomeScreen: React.FC = () => {
             <Profile width={32} height={32} />
           </TouchableOpacity>
 
-        </View>
+        </View> */}
       </LinearGradient>
     </ScrollView>
   )

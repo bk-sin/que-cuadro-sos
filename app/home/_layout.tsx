@@ -1,6 +1,5 @@
 import React from 'react'
 import { Stack } from 'expo-router'
-import { SafeAreaView } from 'react-native-safe-area-context'
 import { Text, View } from 'react-native'
 import Colors from '../../constants/Colors'
 import { gutter, margin, width } from '../../constants/Spacing'
@@ -10,7 +9,7 @@ import Shadows from '../../constants/Shadows'
 const HomeStack: React.FC = () => {
   const Header: React.FC = () => {
     return (
-    <SafeAreaView style={{ paddingTop: 24, position: 'absolute', alignItems: 'center', maxWidth: 500, maxHeight: 700, width: '100%', justifyContent: 'center', alignSelf: 'center' }}>
+    <View style={{ paddingTop: 40, position: 'absolute', alignItems: 'center', maxWidth: 500, maxHeight: 700, width: '100%', justifyContent: 'center', alignSelf: 'center' }}>
     <View style={{ height: 52, width: (width - (margin * 2)), flexDirection: 'row', justifyContent: 'space-between', maxWidth: 500, alignSelf: 'center', gap: gutter * 2, alignItems: 'center' }}>
       <View style={[{ width: 52, height: 52, backgroundColor: Colors.background, borderRadius: 100, borderWidth: 4, borderColor: Colors.white }, Shadows.header]} />
       <View style={[{ flex: 1, flexDirection: 'row' }]}>
@@ -26,7 +25,7 @@ const HomeStack: React.FC = () => {
         <Text style={[Fonts.header.points, { textShadowColor: 'rgba(0,0,0,0.2)', textShadowRadius: 10 }]}>231</Text>
       </View>
     </View>
-    </SafeAreaView>
+    </View>
     )
   }
   return (

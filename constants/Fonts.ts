@@ -1,11 +1,13 @@
 import { type TextStyle } from 'react-native'
 import Colors from './Colors'
+import { height } from './Spacing'
 
 interface FontsType {
   title: TextStyle
   menu: TextStyle
   text14: TextStyle
   text16: TextStyle
+  text18: TextStyle
   header: { level: TextStyle, points: TextStyle }
 }
 
@@ -20,8 +22,8 @@ const weight = {
 const Fonts: FontsType = {
   title: {
     fontFamily: weight.bold,
-    fontSize: 28,
-    lineHeight: 42,
+    fontSize: height < 700 ? 24 : 28,
+    lineHeight: height < 700 ? 30 : 42,
     color: Colors.text
   },
   menu: {
@@ -41,6 +43,12 @@ const Fonts: FontsType = {
     fontSize: 16,
     lineHeight: 24,
     color: Colors.grey2
+  },
+  text18: {
+    fontFamily: weight.semi,
+    fontSize: 18,
+    lineHeight: 24,
+    color: Colors.white
   },
   header: {
     level: {
