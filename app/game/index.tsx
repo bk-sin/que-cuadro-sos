@@ -10,7 +10,7 @@ import Colors from '../../constants/Colors'
 import { height, margin } from '../../constants/Spacing'
 import { LinearGradient } from 'expo-linear-gradient'
 import Fonts from '../../constants/Fonts'
-import ClubData from '../../constants/game/clubs'
+import ClubData from '../../constants/game/Clubs'
 import { Image } from 'expo-image'
 import Animated, {
   runOnJS,
