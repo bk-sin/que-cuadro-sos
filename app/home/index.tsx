@@ -45,7 +45,7 @@ const HomeScreen: React.FC = () => {
             }}
           />
           <Text style={[Fonts.menu, { textAlign: 'center', marginTop: 16 }]}>
-            {'MULTI\nPLAYER'}
+            {'JUGAR'}
           </Text>
           </TouchableOpacity>
         </View>

@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity, type ViewStyle } from 'react-native'
 import React, {
   type Dispatch,
   type SetStateAction,
@@ -21,11 +21,24 @@ import Animated, {
 } from 'react-native-reanimated'
 import { router } from 'expo-router'
 
-const Button: React.FC<{
+export const Button: React.FC<{
   tx: string
   active?: boolean
   onPress: () => void
-}> = ({ tx = 'button', active = false, onPress }) => {
+  style?: ViewStyle
+  variant?: 'primary' | 'secondary'
+}> = ({ tx = 'button', active = false, onPress, style, variant = 'primary' }) => {
+  const styles = {
+    primary: {
+      backgroundColor: Colors.primary
+    },
+    secondary: {
+      backgroundColor: Colors.secondary
+    },
+    outlined: {
+      backgroundColor: Colors.background
+    }
+  }
   return (
     <TouchableOpacity
       onPress={onPress}
@@ -38,7 +51,9 @@ const Button: React.FC<{
           borderWidth: 2,
           borderColor: active ? Colors.white : 'rgba(255,255,255, 0.4)',
           alignItems: 'center'
-        }
+        },
+        styles[variant],
+        style
       ]}
     >
       <Text style={[Fonts.text18]}>{tx}</Text>
