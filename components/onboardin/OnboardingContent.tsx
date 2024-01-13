@@ -32,7 +32,8 @@ const OnboardingContent: React.FC = () => {
       style={[
         {
           backgroundColor: Colors.white,
-          padding: 48,
+          paddingHorizontal: 24,
+          paddingVertical: 32,
           borderRadius: 40,
           zIndex: 1,
           maxWidth: 500,

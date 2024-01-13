@@ -1,14 +1,14 @@
 export default [
   {
-    title: 'Interesting QUIZ\nAwaits You 1',
-    description: 'play quizzes with your friends\nand get various prizes'
+    title: 'De Que Cuadro Sos?',
+    description: 'Adiviná qué club de fútbol argentino se esconde detrás de las preguntas y desafiá a tus amigos a sumarse.'
   },
   {
-    title: 'Interesting QUIZ\nAwaits You 2',
-    description: 'play quizzes with your friends\nand get various prizes'
+    title: 'Demostrá tus conocimientos futboleros',
+    description: 'Arrancá a descubrir tu club de fútbol ideal con quizzes desafiantes junto a tus amigos.'
   },
   {
-    title: 'Interesting QUIZ\nAwaits You 3',
-    description: 'play quizzes with your friends\nand get various prizes'
+    title: 'Jugá y competí',
+    description: 'Peleá por la puntuación más alta mientras te divertís adivinando cuál es tu cuadro.'
   }
 ]
