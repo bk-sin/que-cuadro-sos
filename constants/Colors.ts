@@ -10,5 +10,7 @@ export default {
   grey2: '#A7A7A7',
   grey3: '#DCDFE3',
   yellow: '#FFE55A',
+  red: '#DF2E38',
+  green: '#5D9C59',
   trasparent: 'rgba(0,0,0,0)'
 }

@@ -8,10 +8,9 @@ import { LinearGradient } from 'expo-linear-gradient'
 import useScoreStore from '../../store/useScoreStore'
 
 const LoseScreen: React.FC = () => {
-  const { score, maxScore, resetScore } = useScoreStore()
+  const { score, maxScore, updateScore } = useScoreStore()
   const { win } = useLocalSearchParams()
   const isWin = Boolean(win === 'true')
-
   return (
     <LinearGradient
         colors={Colors.backgroundGradient}
@@ -30,11 +29,11 @@ const LoseScreen: React.FC = () => {
       <Text style={[Fonts.menu, { textAlign: 'center', marginBottom: 24 }]}>{isWin ? 'Ganaste' : 'Perdiste'}</Text>
       <Button tx='Volver a jugar' onPress={(): void => {
         router.replace('/game/')
-        !isWin && resetScore()
+        void updateScore(false)
       }} style={{ marginBottom: 16 }} />
       <Button tx='Menu principal' onPress={(): void => {
         router.replace('/home/')
-        resetScore()
+        void updateScore(false)
       }} variant='secondary' />
     </View>
     </LinearGradient>

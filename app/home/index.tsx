@@ -33,13 +33,12 @@ const HomeScreen: React.FC = () => {
           <TouchableOpacity onPress={() => { router.push('/game/') }}>
           <Image
             source={require('../../assets/images/Multiplayer.png')}
+            contentFit='cover'
             style={{
               width,
               maxWidth: 500,
               maxHeight: height / 2,
-              height: width * 0.736,
-              objectFit: 'contain',
-              resizeMode: 'contain'
+              height: width * 0.736
             }}
           />
           <Text style={[Fonts.menu, { textAlign: 'center', marginTop: 16 }]}>
